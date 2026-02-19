@@ -1,0 +1,16 @@
+game PrisonersDilemma {
+
+  players: A , B
+
+  strategies:
+    A: Cooperate, Defect
+    B: Cooperate, Defect
+
+  payoff:
+    (Cooperate, Cooperate) -> (-1, -1)
+    (Cooperate, Defect)    -> (-3, 0)
+    (Defect, Cooperate )    -> (0, -3)
+    (Defect, Defect)       -> (-2, -2)
+
+  compute: Nash
+}
