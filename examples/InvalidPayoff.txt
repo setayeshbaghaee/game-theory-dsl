@@ -1,0 +1,19 @@
+game InvalidPayoff { 
+  players: A, B, C 
+ 
+  strategies: 
+    A: X, Y 
+    B: M, N 
+    C: P, Q 
+ 
+  payoff: 
+    (X, M, P) -> (1, 2) 
+ 
+  compute: Nash 
+}
+
+
+/* Output 
+Semantic Error: 
+Payoff must contain exactly 3 values for players: A, B, C 
+Found: (1, 2) */

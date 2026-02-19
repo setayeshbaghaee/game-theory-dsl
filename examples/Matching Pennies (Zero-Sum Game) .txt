@@ -1,0 +1,17 @@
+game MatchingPennies { 
+    players: P1, P2 
+    strategies: 
+        P1: Heads, Tails 
+        P2: Heads, Tails 
+    payoff: 
+        (Heads, Heads) -> (1, -1) 
+        (Heads, Tails) -> (-1, 1) 
+        (Tails, Heads) -> (-1, 1) 
+        (Tails, Tails) -> (1, -1) 
+    compute: Nash 
+} 
+/*  
+Output 
+Game: MatchingPennies 
+Nash Equilibrium: 
+None found (No pure strategy equilibrium)   */

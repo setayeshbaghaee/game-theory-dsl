@@ -1,0 +1,20 @@
+game StrategyError { 
+    players: A, B 
+    strategies: 
+        A: Top, Bottom 
+        B: Left, Right 
+    payoff: 
+        (Top, Left)    -> (1, 1) 
+        (Top, Center)  -> (0, 0) 
+        (Bottom, Left) -> (2, 2) 
+        (Bottom, Right)-> (3, 3) 
+    compute: ShowMatrix 
+} 
+
+/*  
+ 
+Output 
+Semantic Error: 
+Undefined strategy 'Center' used for player 'B' in payoff definition. 
+Allowed strategies for B are: {Left, Right} 
+  */

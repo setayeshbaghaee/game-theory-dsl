@@ -1,0 +1,29 @@
+game ThreePlayerCoordination { 
+  players: A, B, C 
+ 
+  strategies: 
+    A: Left, Right 
+    B: Left, Right 
+    C: Left, Right 
+ 
+  payoff: 
+    (Left, Left, Left)   -> (2, 2, 2) 
+    (Right, Right, Right)-> (2, 2, 2) 
+ 
+    (Left, Left, Right)  -> (0, 0, 1) 
+    (Left, Right, Left)  -> (0, 1, 0) 
+    (Right, Left, Left)  -> (1, 0, 0) 
+ 
+    (Right, Right, Left) -> (0, 0, 1) 
+    (Right, Left, Right) -> (0, 1, 0) 
+    (Left, Right, Right) -> (1, 0, 0) 
+ 
+  compute: Nash 
+} 
+
+/*  
+Output 
+Game: ThreePlayerCoordination 
+Nash Equilibria: 
+  (Left, Left, Left) 
+  (Right, Right, Right)  */
